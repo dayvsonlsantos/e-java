@@ -34,7 +34,7 @@ public class App {
                 System.out.format("\nHá sim, por favor, também informe o tamanho do lado deste %dº polígono em cm: ",
                         contador + 1);
 
-                tamanhoDoLado = leitor.nextInt();
+                tamanhoDoLado = leitor.nextFloat();
                 tamanhoLadoPoligono[contador] = tamanhoDoLado;
 
                 switch (numeroDeLados) {
@@ -96,12 +96,12 @@ public class App {
                         switch (quantLadosPoligono[i]) {
                             case 3:
                                 double areaTriangulo = (Math.pow(tamanhoLadoPoligono[i], 2) * Math.sqrt(3)) / 4;
-                                System.out.format("\nTriângulo de lado %d cm e área %.2f cm2", quantLadosPoligono[i],
+                                System.out.format("\nTriângulo de lado %.2f cm e área %.2f cm2", tamanhoLadoPoligono[i],
                                         areaTriangulo);
                                 areaTotal += areaTriangulo;
                                 break;
                             case 4:
-                                System.out.format("\nQuadrado de lado %d cm e área %.2f cm2", quantLadosPoligono[i],
+                                System.out.format("\nQuadrado de lado %.2f cm e área %.2f cm2", tamanhoLadoPoligono[i],
                                         tamanhoLadoPoligono[i] * tamanhoLadoPoligono[i]);
                                 areaTotal += (tamanhoLadoPoligono[i] * tamanhoLadoPoligono[i]);
                                 break;
